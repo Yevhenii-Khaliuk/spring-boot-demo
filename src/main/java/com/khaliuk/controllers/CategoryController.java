@@ -22,7 +22,7 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
-    @CrossOrigin("localhost:4200")
+    @CrossOrigin("http://localhost:4200")
     @RequestMapping(value = "/category", method = RequestMethod.GET)
     public ResponseEntity<List<Category>> getAll() {
         List<Category> categories = categoryService.getAll();
