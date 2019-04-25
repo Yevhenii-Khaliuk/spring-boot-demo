@@ -17,12 +17,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
+@CrossOrigin("http://localhost:4200")
 public class CategoryController {
 
     @Autowired
     private CategoryService categoryService;
 
-    @CrossOrigin("http://localhost:4200")
     @RequestMapping(value = "/category", method = RequestMethod.GET)
     public ResponseEntity<List<Category>> getAll() {
         List<Category> categories = categoryService.getAll();
